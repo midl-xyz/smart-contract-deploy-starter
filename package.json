@@ -1,0 +1,32 @@
+{
+  "name": "midl-solidity-on-bitcoin-example",
+  "version": "1.0.0",
+  "scripts": {},
+  "license": "MIT",
+  "devDependencies": {
+    "@midl-xyz/ethers": "6.13.0-4",
+    "@midl-xyz/hardhat-deploy": "2.0.0-next.9",
+    "@midl-xyz/midl-js-core": "2.0.0-next.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.9",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.14",
+    "@openzeppelin/contracts": "^5.3.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "dotenv": "^17.0.1",
+    "ethers": "npm:@midl-xyz/ethers@6.13.0-4",
+    "hardhat": "^2.25.0",
+    "hardhat-deploy": "0.11.30",
+    "path": "^0.12.7",
+    "solidity-coverage": "^0.8.16",
+    "typescript": "^5.8.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "ethers": "npm:@midl-xyz/ethers@6.13.0-4"
+    }
+  },
+  "volta": {
+    "node": "20.11.1"
+  }
+}

@@ -1,0 +1,34 @@
+# for verify
+args.js
+pkg
+.env
+
+# Foundry
+cache/
+out/
+
+# JS
+node_modules/
+package-lock.json
+
+# Hardhat files
+cache_hardhat/
+artifacts/
+
+# Hardhat plugin files
+typechain-types/
+
+# Merkle generator
+scripts/generator/*json
+scripts/generator/*log
+
+*.go
+abi
+build
+scripts/xbribes
+# for verify
+Flattened.sol
+yarn.lock
+yarn-error.log
+docs/
+coverage/
