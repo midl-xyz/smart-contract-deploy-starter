@@ -4,8 +4,7 @@ const deploy: DeployFunction = async ({ midl }) => {
     console.log("Starting deployment process...");
 
     await midl.initialize();
-
-    await midl.deploy("TERC20", {});
+    await midl.deploy("TERC20", { args: ["Test Token", "TT", 100_000_000_000] });
 
     await midl.execute();
 };
