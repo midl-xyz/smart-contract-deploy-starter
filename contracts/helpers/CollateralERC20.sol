@@ -3,7 +3,7 @@ pragma solidity ^0.8.24;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract TERC20 is ERC20 {
+contract CollateralERC20 is ERC20 {
     error WrongAccess();
 
     address public minter;

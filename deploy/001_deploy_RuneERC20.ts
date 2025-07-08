@@ -4,11 +4,14 @@ const deploy: DeployFunction = async ({ midl }) => {
     console.log("Starting deployment process...");
 
     await midl.initialize();
-    await midl.deploy("TERC20", { args: ["Test Token", "TT", 100_000_000_000] });
+    const RuneERC20 = await midl.getDeployment("CollateralERC20");
+
+    console.log(midl.getConfig()?.getState().accounts);
+    await midl.deploy("RuneERC20", { args: [RuneERC20?.address] });
 
     await midl.execute();
 };
 
-deploy.tags = ["main", "TERC20"];
+deploy.tags = ["main", "RuneERC20"]; 
 
 export default deploy;
