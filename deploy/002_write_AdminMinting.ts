@@ -4,9 +4,8 @@ import { DeployFunction } from "hardhat-deploy/types";
 const deploy: DeployFunction = async ({ midl }) => {
   await midl.initialize();
 
-  console.log("Performing Admin Based minting");
-  const EVMAddress = midl.wallet.getEVMAddress();
-
+  const EVMAddress = midl.getEVMAddress();
+  console.log("Performing Admin Based minting with wallet: ", EVMAddress);
   await midl.callContract("RuneERC20", "mint", {
     args: [parseEther("100000000"), EVMAddress],
   });
