@@ -12,8 +12,8 @@ importers:
         specifier: 6.13.0-4
         version: 6.13.0-4
       '@midl-xyz/hardhat-deploy':
-        specifier: 2.0.0-next.18
-        version: 2.0.0-next.18(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+        specifier: 2.0.0-next.21
+        version: 2.0.0-next.21(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@midl-xyz/midl-js-core':
         specifier: 2.0.0-next.18
         version: 2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
@@ -207,16 +207,16 @@ packages:
     resolution: {integrity: sha512-l3HPZF5gdjhiybg0oA8V20Wrc0Wd0k23r+7HNQTBY/FBbbbmNqthIQoWT8RFGecwod5BuvARY7PdJRc3oZr9kQ==}
     engines: {node: '>=14.0.0'}
 
-  '@midl-xyz/hardhat-deploy@2.0.0-next.18':
-    resolution: {integrity: sha512-dgQ6viCARf8aJGcndokvtlCrEB6BVfbqfwsc7i9MzHZfasAiXoX1mwn0zeQVpwqzk+rRtNQ7jW9bpdA/OF3uOQ==}
+  '@midl-xyz/hardhat-deploy@2.0.0-next.21':
+    resolution: {integrity: sha512-Vej5XnyLTzE3iTXy/gVN4v9+80rjjUs2q90IluyKCnqUx+4zteCIoczZUHSy/U2PSTQaUWdYz5obNGvKuq/TBQ==}
     peerDependencies:
       hardhat: ^2.22.17
 
   '@midl-xyz/midl-js-core@2.0.0-next.18':
     resolution: {integrity: sha512-UcBk+sY6BY4ywGTgqC2aoFigBh+bN3H6epzcGz5g0TtHVc9JN42dtc2D4jtZxTP+pYCllPJXC5i/oMRFwpcYzQ==}
 
-  '@midl-xyz/midl-js-executor@2.0.0-next.18':
-    resolution: {integrity: sha512-+q7ZrUOjGoq62kKTQnb+wtA9zqPsIit/Hk1OgKV9XTB6UYlIAWxad9sPdNFj8nQzuDNt+0bzY73wcfDoAAn+iQ==}
+  '@midl-xyz/midl-js-executor@2.0.0-next.19':
+    resolution: {integrity: sha512-SVp2f8zvEfo2o1nMYkSFJsA3K3A6WrUcOkMMH2bKQhvAuXKG4JX7yZmMNrBAgxXb12BJWEzDvEiGKrFHiNlN2w==}
     peerDependencies:
       bitcoinjs-lib: 7.0.0-rc.0
       viem: npm:@midl-xyz/midl-viem
@@ -2601,11 +2601,11 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@midl-xyz/hardhat-deploy@2.0.0-next.18(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
+  '@midl-xyz/hardhat-deploy@2.0.0-next.21(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
     dependencies:
       '@bitcoinerlab/secp256k1': 1.2.0
       '@midl-xyz/midl-js-core': 2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
-      '@midl-xyz/midl-js-executor': 2.0.0-next.18(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(bitcoinjs-lib@6.1.7)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+      '@midl-xyz/midl-js-executor': 2.0.0-next.19(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(bitcoinjs-lib@6.1.7)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@midl-xyz/midl-js-node': 2.0.0-next.18(@midl-xyz/midl-js-core@2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74))(typescript@5.8.3)
       '@midl-xyz/midl-js-react': 2.0.0-next.18(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@nomicfoundation/hardhat-viem': 2.0.6(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(typescript@5.8.3)(zod@3.25.74)
@@ -2649,7 +2649,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@midl-xyz/midl-js-executor@2.0.0-next.18(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(bitcoinjs-lib@6.1.7)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
+  '@midl-xyz/midl-js-executor@2.0.0-next.19(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(bitcoinjs-lib@6.1.7)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
     dependencies:
       '@bitcoinerlab/secp256k1': 1.2.0
       '@midl-xyz/contracts': 0.1.1(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))
