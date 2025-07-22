@@ -12,11 +12,11 @@ importers:
         specifier: 6.13.0-4
         version: 6.13.0-4
       '@midl-xyz/hardhat-deploy':
-        specifier: 2.0.0-next.21
-        version: 2.0.0-next.21(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+        specifier: 2.0.0-next.26
+        version: 2.0.0-next.26(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@midl-xyz/midl-js-core':
-        specifier: 2.0.0-next.18
-        version: 2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+        specifier: 2.0.0-next.23
+        version: 2.0.0-next.23(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@nomicfoundation/hardhat-chai-matchers':
         specifier: ^2.0.9
         version: 2.0.9(@midl-xyz/ethers@6.13.0-4)(@nomicfoundation/hardhat-ethers@3.0.6(@midl-xyz/ethers@6.13.0-4)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3)))(chai@4.5.0)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))
@@ -56,6 +56,9 @@ importers:
       solidity-coverage:
         specifier: ^0.8.16
         version: 0.8.16(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -207,27 +210,27 @@ packages:
     resolution: {integrity: sha512-l3HPZF5gdjhiybg0oA8V20Wrc0Wd0k23r+7HNQTBY/FBbbbmNqthIQoWT8RFGecwod5BuvARY7PdJRc3oZr9kQ==}
     engines: {node: '>=14.0.0'}
 
-  '@midl-xyz/hardhat-deploy@2.0.0-next.21':
-    resolution: {integrity: sha512-Vej5XnyLTzE3iTXy/gVN4v9+80rjjUs2q90IluyKCnqUx+4zteCIoczZUHSy/U2PSTQaUWdYz5obNGvKuq/TBQ==}
+  '@midl-xyz/hardhat-deploy@2.0.0-next.26':
+    resolution: {integrity: sha512-b4gJNK2GIfTtK+rMaLhJrXYV6Xp4iBlfMORPzWOynWjnd1aLCjo7wH20o5S7WIBDqfTw5UOUzrSQloEDSE2GMg==}
     peerDependencies:
       hardhat: ^2.22.17
 
-  '@midl-xyz/midl-js-core@2.0.0-next.18':
-    resolution: {integrity: sha512-UcBk+sY6BY4ywGTgqC2aoFigBh+bN3H6epzcGz5g0TtHVc9JN42dtc2D4jtZxTP+pYCllPJXC5i/oMRFwpcYzQ==}
+  '@midl-xyz/midl-js-core@2.0.0-next.23':
+    resolution: {integrity: sha512-if7zDeD9s5Qwj8mJQcISxveKBKQmjpi/BKh0SZ+do31ICxX9HSKxTpayxh1CKdNrNyxwlSmamuhxrbrx9e7y7A==}
 
-  '@midl-xyz/midl-js-executor@2.0.0-next.19':
-    resolution: {integrity: sha512-SVp2f8zvEfo2o1nMYkSFJsA3K3A6WrUcOkMMH2bKQhvAuXKG4JX7yZmMNrBAgxXb12BJWEzDvEiGKrFHiNlN2w==}
+  '@midl-xyz/midl-js-executor@2.0.0-next.26':
+    resolution: {integrity: sha512-tfBedMPwGCRl+aACNs8GVVYO7mJSx/hzifz6M5TYjJ0+hyVC3dJlf24Dz60O5GKuHjhbfqq2X9XnqMoQcN8jdw==}
     peerDependencies:
       bitcoinjs-lib: 7.0.0-rc.0
       viem: npm:@midl-xyz/midl-viem
 
-  '@midl-xyz/midl-js-node@2.0.0-next.18':
-    resolution: {integrity: sha512-TDIEGok3NH+T0Wgf3kZNouBTf1cOdxzJMErLIgU1Y14ZRhJEaPzec8bncmVAOLfyAMsNpqmEJ6dcijIXX95jXw==}
+  '@midl-xyz/midl-js-node@2.0.0-next.23':
+    resolution: {integrity: sha512-yffhK7EAI+vHvzwziBknteYVK3Q8MUf3+NmPEiurViyvPhSWlJ77ZWk+rj2i2sPH/iGXT9UypqtVDA6atF37CA==}
     peerDependencies:
-      '@midl-xyz/midl-js-core': ^2.0.0-next.18
+      '@midl-xyz/midl-js-core': ^2.0.0-next.23
 
-  '@midl-xyz/midl-js-react@2.0.0-next.18':
-    resolution: {integrity: sha512-kxotyD/WolLMleuk96FOXeSmTdKPT5aPKq0itYbpyMwiBo5cra7v8ROF2S6BspOV4XRAxTV+G1rrOmxgXSXpPA==}
+  '@midl-xyz/midl-js-react@2.0.0-next.24':
+    resolution: {integrity: sha512-t/9zoWcsuKWksYqlbGTV5MOugCjB6G0HgO62j6+26zKtdTcrb8VE2vcj71pz1cofqzO7pp4zDVMpRGidYrF5OA==}
     peerDependencies:
       '@tanstack/react-query': '*'
       '@types/react': ^18.3.11
@@ -1445,6 +1448,11 @@ packages:
     resolution: {integrity: sha512-x7fpwxOkbhFCaJDJ8vb1fBY3DdSa4AlITaz+HHILQJzdPMnHEFjxPwVUi1ALIbcIxDE0PNe/0i7frnY8QnBQog==}
     engines: {node: '>=7.10.1'}
 
+  json5@2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
+    engines: {node: '>=6'}
+    hasBin: true
+
   jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
 
@@ -1914,6 +1922,10 @@ packages:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
     engines: {node: '>=8'}
 
+  strip-bom@3.0.0:
+    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
+    engines: {node: '>=4'}
+
   strip-hex-prefix@1.0.0:
     resolution: {integrity: sha512-q8d4ue7JGEiVcypji1bALTos+0pWtyGlivAWyPuTkHzuTCJqrK9sWxYQZUq6Nq3cuyv3bm734IhHvHtGGURU6A==}
     engines: {node: '>=6.5.0', npm: '>=3'}
@@ -1988,6 +2000,10 @@ packages:
         optional: true
       '@swc/wasm':
         optional: true
+
+  tsconfig-paths@4.2.0:
+    resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
+    engines: {node: '>=6'}
 
   tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
@@ -2601,13 +2617,13 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@midl-xyz/hardhat-deploy@2.0.0-next.21(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
+  '@midl-xyz/hardhat-deploy@2.0.0-next.26(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
     dependencies:
       '@bitcoinerlab/secp256k1': 1.2.0
-      '@midl-xyz/midl-js-core': 2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
-      '@midl-xyz/midl-js-executor': 2.0.0-next.19(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(bitcoinjs-lib@6.1.7)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
-      '@midl-xyz/midl-js-node': 2.0.0-next.18(@midl-xyz/midl-js-core@2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74))(typescript@5.8.3)
-      '@midl-xyz/midl-js-react': 2.0.0-next.18(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+      '@midl-xyz/midl-js-core': 2.0.0-next.23(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+      '@midl-xyz/midl-js-executor': 2.0.0-next.26(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(bitcoinjs-lib@6.1.7)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+      '@midl-xyz/midl-js-node': 2.0.0-next.23(@midl-xyz/midl-js-core@2.0.0-next.23(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74))(typescript@5.8.3)
+      '@midl-xyz/midl-js-react': 2.0.0-next.24(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@nomicfoundation/hardhat-viem': 2.0.6(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(typescript@5.8.3)(zod@3.25.74)
       bip32: 5.0.0-rc.0(typescript@5.8.3)
       bip39: 3.1.0
@@ -2628,7 +2644,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@midl-xyz/midl-js-core@2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
+  '@midl-xyz/midl-js-core@2.0.0-next.23(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
     dependencies:
       '@bitcoinerlab/secp256k1': 1.2.0
       bip32: 5.0.0-rc.0(typescript@5.8.3)
@@ -2649,12 +2665,12 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@midl-xyz/midl-js-executor@2.0.0-next.19(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(bitcoinjs-lib@6.1.7)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
+  '@midl-xyz/midl-js-executor@2.0.0-next.26(@midl-xyz/midl-viem@2.21.37(typescript@5.8.3)(zod@3.25.74))(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(bitcoinjs-lib@6.1.7)(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
     dependencies:
       '@bitcoinerlab/secp256k1': 1.2.0
       '@midl-xyz/contracts': 0.1.1(hardhat@2.25.0(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3))(typescript@5.8.3))
-      '@midl-xyz/midl-js-core': 2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
-      '@midl-xyz/midl-js-react': 2.0.0-next.18(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+      '@midl-xyz/midl-js-core': 2.0.0-next.23(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+      '@midl-xyz/midl-js-react': 2.0.0-next.24(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@noble/secp256k1': 1.7.1
       '@scure/btc-signer': 1.4.0
       bip322-js: 2.0.0
@@ -2675,10 +2691,10 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@midl-xyz/midl-js-node@2.0.0-next.18(@midl-xyz/midl-js-core@2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74))(typescript@5.8.3)':
+  '@midl-xyz/midl-js-node@2.0.0-next.23(@midl-xyz/midl-js-core@2.0.0-next.23(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74))(typescript@5.8.3)':
     dependencies:
       '@bitcoinerlab/secp256k1': 1.2.0
-      '@midl-xyz/midl-js-core': 2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+      '@midl-xyz/midl-js-core': 2.0.0-next.23(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@noble/hashes': 1.8.0
       bitcoinjs-lib: 7.0.0-rc.0(typescript@5.8.3)
       bitcoinjs-message: 2.2.0
@@ -2687,9 +2703,9 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@midl-xyz/midl-js-react@2.0.0-next.18(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
+  '@midl-xyz/midl-js-react@2.0.0-next.24(@tanstack/react-query@5.81.5(react@18.3.1))(@types/react@18.3.23)(immer@10.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)':
     dependencies:
-      '@midl-xyz/midl-js-core': 2.0.0-next.18(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
+      '@midl-xyz/midl-js-core': 2.0.0-next.23(@types/react@18.3.23)(immer@10.0.2)(react@18.3.1)(typescript@5.8.3)(zod@3.25.74)
       '@tanstack/react-query': 5.81.5(react@18.3.1)
       '@types/react': 18.3.23
       react: 18.3.1
@@ -4104,6 +4120,8 @@ snapshots:
 
   json-stream-stringify@3.1.6: {}
 
+  json5@2.2.3: {}
+
   jsonfile@4.0.0:
     optionalDependencies:
       graceful-fs: 4.2.11
@@ -4607,6 +4625,8 @@ snapshots:
     dependencies:
       ansi-regex: 5.0.1
 
+  strip-bom@3.0.0: {}
+
   strip-hex-prefix@1.0.0:
     dependencies:
       is-hex-prefixed: 1.0.0
@@ -4694,6 +4714,12 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     optional: true
+
+  tsconfig-paths@4.2.0:
+    dependencies:
+      json5: 2.2.3
+      minimist: 1.2.8
+      strip-bom: 3.0.0
 
   tslib@1.14.1: {}
 

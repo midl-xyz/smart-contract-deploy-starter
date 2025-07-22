@@ -1,6 +1,11 @@
 # RuneERC20 – Bitcoin-Standard ERC-20 Example with Midl
 
-This repository shows the **minimal** Solidity and Hardhat scaffolding required to mint, burn and redeem a Bitcoin-backed asset on an EVM chain **without bridges or wrappers**.  
+This repository shows the **minimal** Solidity and Hardhat examples with common use cases. Such as:
+
+### Proxy Contracts deployment with multiple same artifact based deployments
+
+### ERC20 Assets emitted with native BTC as collateral
+Required to mint, burn and redeem a Bitcoin-backed asset on an EVM chain **without bridges or wrappers**.  
 It implements the following flow:
 
 1. A user sends real bitcoin to a custodian-controlled address and signs an on-chain **MintIntent**.  

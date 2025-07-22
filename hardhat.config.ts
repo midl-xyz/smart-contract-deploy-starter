@@ -5,6 +5,7 @@ import "solidity-coverage";
 import "dotenv";
 import "hardhat-deploy";
 import "@midl-xyz/hardhat-deploy";
+import 'tsconfig-paths/register';
 import type { HardhatUserConfig } from "hardhat/config";
 import { resolve } from "path";
 import { config as dotenvConfig } from "dotenv";
