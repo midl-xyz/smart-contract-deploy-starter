@@ -5,8 +5,8 @@
   "license": "MIT",
   "devDependencies": {
     "@midl-xyz/ethers": "6.13.0-4",
-    "@midl-xyz/hardhat-deploy": "2.0.0-next.26",
-    "@midl-xyz/midl-js-core": "2.0.0-next.23",
+    "@midl-xyz/hardhat-deploy": "2.0.0-next.27",
+    "@midl-xyz/midl-js-core": "2.0.0-next.27",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.9",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
     "@nomicfoundation/hardhat-verify": "^2.0.14",

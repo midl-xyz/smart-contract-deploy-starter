@@ -1,6 +1,4 @@
-import { getProxyAdminAddress } from "@/utils";
 import type { DeployFunction } from "hardhat-deploy/types";
-import { ProxyAdmin, ProxyAdmin__factory } from "@/typechain-types";
 
 const deploy: DeployFunction = async ({ midl }) => {
   console.log("Starting deployment process...");

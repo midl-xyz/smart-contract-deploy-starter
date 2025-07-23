@@ -2,8 +2,6 @@
 
 This repository shows the **minimal** Solidity and Hardhat examples with common use cases. Such as:
 
-### Proxy Contracts deployment with multiple same artifact based deployments
-
 ### ERC20 Assets emitted with native BTC as collateral
 Required to mint, burn and redeem a Bitcoin-backed asset on an EVM chain **without bridges or wrappers**.  
 It implements the following flow:
@@ -12,6 +10,11 @@ It implements the following flow:
 2. Midl validators watch the Bitcoin mempool, verify the deposit and call the EVM contract to mint the same amount of ERC-20 (`RuneERC20`).  
 3. The user can later burn the token to trigger **redemption**; the custodian releases the original sats.  
 4. A built-in **circuit-breaker** lets the custodian refuse redemptions from tainted addresses, exactly the mechanism BitGo used to stay safe during the 2021 BadgerDAO exploit.
+
+### Proxy Contracts deployment with multiple same artifact based deployments
+
+Can be run with deploy_Proxies script
+
 
 ---
 
