@@ -1,12 +1,15 @@
 {
   "name": "midl-solidity-on-bitcoin-example",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "deploy:proxies": "node utils/deployStarter.js proxies && hardhat deploy",
+    "deploy:base-example": "node utils/deployStarter.js base-example && hardhat deploy"
+  },
   "license": "MIT",
   "devDependencies": {
     "@midl-xyz/ethers": "6.13.0-4",
-    "@midl-xyz/hardhat-deploy": "2.0.0-next.27",
-    "@midl-xyz/midl-js-core": "2.0.0-next.27",
+    "@midl-xyz/hardhat-deploy": "2.0.0-next.33",
+    "@midl-xyz/midl-js-core": "2.0.0-next.32",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.9",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
     "@nomicfoundation/hardhat-verify": "^2.0.14",
