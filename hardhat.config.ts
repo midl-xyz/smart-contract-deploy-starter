@@ -28,9 +28,8 @@ const config: HardhatUserConfig = {
             accounts: {
                 mnemonic: process.env.MNEMONIC,
                 path: walletsPaths.leather
-            },
-            chainId: 777
-        },
+            }
+        }
     },
     midl: {
         path: "deployments",
