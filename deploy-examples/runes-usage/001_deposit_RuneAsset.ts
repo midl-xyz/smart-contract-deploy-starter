@@ -18,20 +18,30 @@ const deploy: DeployFunction = async ({ midl }) => {
 
 	await midl.callContract("TERC20", "approve", {
 		args: [Relayer?.address, amount],
-		to: runeAddress,
+		//to: runeAddress,
 	});
 
-	// await midl.callContract(
-	// 	"RunesRelayer",
-	// 	"deposit",
-	// 	{ args: [amount] },
-	// 	{
-	// 		hasRunesDeposit: true,
-	// 		runes: [{ id: runeId, value: amount, address: runeAddress }],
-	// 	},
-	// );
+	await midl.callContract(
+		"RunesRelayer",
+		"depositRune",
+		{ args: [amount] },
+		{
+			hasRunesDeposit: true,
+			runes: [{ id: runeId, value: amount, address: runeAddress }],
+		},
+	);
 
-	await midl.execute();
+	await midl.callContract(
+		"RunesRelayer",
+		"withdrawRune",
+		{ args: [amount] },
+		{
+			hasRunesWithdraw: true,
+			runes: [{ id: runeId, value: amount, address: runeAddress }],
+		},
+	);
+
+	await midl.execute({ assetsToWithdraw: [runeAddress], shouldComplete: true });
 };
 
 deploy.tags = ["main", "TERC20"];

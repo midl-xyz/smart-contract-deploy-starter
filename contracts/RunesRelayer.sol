@@ -22,6 +22,6 @@ contract RunesRelayer {
     }
 
     function withdrawRune(uint256 _amount) external {
-        collateralERC20.safeTransferFrom(address(this), msg.sender, _amount);
+        collateralERC20.safeTransfer(msg.sender, _amount);
     }
 }
