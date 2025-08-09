@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 error NotEnoughBitcoinPassed();
 
-contract RunesRelayer {
+contract USDCRunesRelayer {
     using SafeERC20 for IERC20;
     IERC20 public collateralERC20;
 
