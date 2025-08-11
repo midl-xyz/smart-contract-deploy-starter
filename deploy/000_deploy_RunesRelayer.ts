@@ -24,10 +24,10 @@ const deploy: DeployFunction = async ({ midl }) => {
 	// }
 
 	const RuneID = {
-		USDC: {
-			runeId: "37535:8",
-			address: "0xb73D9EaB03bCEEE575544353407cc03a606c31bB",
-		},
+		// USDC: {
+		// 	runeId: "37535:8",
+		// 	address: "0xb73D9EaB03bCEEE575544353407cc03a606c31bB",
+		// },
 		USDT: {
 			runeId: "11893:1",
 			address: "0x3eDb3dFD4C8b1bb46304F25e933816A7fDAB6FF6",
@@ -38,51 +38,48 @@ const deploy: DeployFunction = async ({ midl }) => {
 		abi: erc20.ERC20__factory.abi as any,
 		address: RuneID.USDT.address as any,
 	});
-	await midl.save("USDC", {
-		abi: erc20.ERC20__factory.abi as any,
-		address: RuneID.USDC.address as any,
+	// await midl.save("USDC", {
+	// 	abi: erc20.ERC20__factory.abi as any,
+	// 	address: RuneID.USDC.address as any,
+	// });
+
+	// for (const symbol of ["USDT", "USDC"] as const) {
+	const runeId = RuneID["USDT"].runeId;
+	const runeAddress = RuneID["USDT"].address;
+	const amount = 228n;
+	console.log("USDT", runeId, runeAddress);
+
+	await midl.deploy(`USDTRunesRelayer`, { args: [runeAddress] });
+	await midl.execute(); // Run callContract
+
+	const Relayer = await midl.getDeployment(`USDTRunesRelayer`);
+	console.log("Deployed Relayer Address: ", Relayer?.address);
+
+	await midl.callContract(`USDT`, "approve", {
+		args: [Relayer?.address, amount],
 	});
 
-	for (const symbol of ["USDT", "USDC"] as const) {
-		const runeId = RuneID[symbol].runeId;
-		const runeAddress = RuneID[symbol].address;
-		const amount = 228n;
-		console.log(symbol, runeId, runeAddress);
-
-		await midl.deploy(`${symbol}RunesRelayer`, { args: [runeAddress] });
-		await midl.execute(); // Run callContract
-		const Relayer = await midl.getDeployment(`${symbol}RunesRelayer`);
-		console.log("Deployed Relayer Address: ", Relayer?.address);
-
-		// await midl.callContract(`${symbol}`, "approve", {
-		// 	args: [Relayer?.address, MaxUint256 - 1n],
-		// 	//to: runeAddress,
-		// });
-		// await hre.midl.execute();
-		await midl.callContract(
-			`${symbol}RunesRelayer`,
-			"depositRune",
-			{ args: [amount] },
-			{
-				hasRunesDeposit: true,
-				runes: [{ id: runeId, value: amount, address: runeAddress as any }],
+	await midl.callContract(
+		`USDTRunesRelayer`,
+		"depositRune",
+		{ args: [amount] },
+		{
+			deposit: {
+				runes: [{ id: runeId, amount: amount, address: runeAddress as any }],
 			},
-		);
+		},
+	);
 
-		await midl.callContract(
-			`${symbol}RunesRelayer`,
-			"withdrawRune",
-			{ args: [amount] },
-			{
-				hasRunesWithdraw: true,
-				runes: [{ id: runeId, value: amount, address: runeAddress as any }],
+	await midl.callContract(`USDTRunesRelayer`, "withdrawRune", {
+		args: [amount],
+	});
+	await midl.execute({
+		options: {
+			withdraw: {
+				runes: [{ id: runeId, amount: amount, address: runeAddress as any }],
 			},
-		);
-		await midl.execute({
-			assetsToWithdraw: [runeAddress as any],
-			shouldComplete: true,
-		});
-	}
+		},
+	});
 
 	return true;
 };
