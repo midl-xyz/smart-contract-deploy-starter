@@ -1,4 +1,4 @@
-import "@midl-xyz/hardhat-deploy";
+import "@midl/hardhat-deploy";
 import "@nomicfoundation/hardhat-chai-matchers";
 import "@nomicfoundation/hardhat-ethers";
 import "@typechain/hardhat";

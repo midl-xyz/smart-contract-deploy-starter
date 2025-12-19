@@ -18,6 +18,9 @@ contract RunesRelayer {
     }
 
     function depositRune(uint256 _amount) external {
+        if (collateralERC20.balanceOf(msg.sender) < _amount) {
+            revert("Wallet doesn't have enough erc20 for deposit");
+        }
         collateralERC20.safeTransferFrom(msg.sender, address(this), _amount);
     }
 
