@@ -7,10 +7,17 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@midl/executor':
+        specifier: 3.0.0-next.21
+        version: 3.0.0-next.21(@midl/viem@2.21.39(typescript@5.9.2))(@types/react@18.3.23)(bitcoinjs-lib@7.0.0-rc.0(typescript@5.9.2))(react@18.3.1)(typescript@5.9.2)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.1.3
         version: 2.1.3
+      '@midl/core':
+        specifier: 2.0.11
+        version: 2.0.11(@types/react@18.3.23)(react@18.3.1)(typescript@5.9.2)
       '@midl/ethers':
         specifier: 6.13.0-4
         version: 6.13.0-4
@@ -265,6 +272,12 @@ packages:
 
   '@midl/executor@2.0.11':
     resolution: {integrity: sha512-JuIXuGqFO07PMyknxpdUn3rZUVQOFzfb+brTHWNS46tkj/ICgkwTEEs3Cbm81EwmqwXrJ3RAZC2HSL2KuYZGcA==}
+    peerDependencies:
+      '@midl/viem': '*'
+      bitcoinjs-lib: 7.0.0-rc.0
+
+  '@midl/executor@3.0.0-next.21':
+    resolution: {integrity: sha512-HopZvFZNWKHF9B/lFdOI8eQpJ4tQnVv1Ewb8AT8SF0HiQ9HO0yDcFf1ABuJmvFFjP3mL/g1oqJhD3LLn0nCMbw==}
     peerDependencies:
       '@midl/viem': '*'
       bitcoinjs-lib: 7.0.0-rc.0
