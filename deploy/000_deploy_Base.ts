@@ -52,7 +52,7 @@ const deploy: DeployFunction = async ({ midl }) => {
     "RuneERC20",
     "mintUsingBitcoinAsCollateral",
     [parseUnits("5", 16)],
-    { value: parseUnits("5", 16) },
+    { overrides: { evmTransaction: { value: parseUnits("5", 16) } } },
   );
 
   await midl.execute();
