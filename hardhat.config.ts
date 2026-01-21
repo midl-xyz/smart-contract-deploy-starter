@@ -1,7 +1,7 @@
 import "@midl/hardhat-deploy";
 import { MaestroSymphonyProvider, MempoolSpaceProvider } from "@midl/core";
 import "@nomicfoundation/hardhat-chai-matchers";
-import { midl } from "@midl/executor";
+import { midl, midlRegtest } from "@midl/executor";
 import "@nomicfoundation/hardhat-ethers";
 import "@typechain/hardhat";
 import "dotenv";
@@ -34,12 +34,12 @@ const config: HardhatUserConfig = {
       chainId: midl.id,
     },
     regtest: {
-      url: "https://rpc.regtest.midl.xyz",
+      url: "https://rpc.staging.midl.xyz",
       accounts: {
         mnemonic: accounts[0],
         path: walletsPaths.default,
       },
-      chainId: 777,
+      chainId: midlRegtest.id,
     },
   },
   midl: {
@@ -58,7 +58,7 @@ const config: HardhatUserConfig = {
         provider: () =>
           new MempoolSpaceProvider({
             mainnet: "https://mempool.space",
-          } as any),
+          }),
         runesProvider: () =>
           new MaestroSymphonyProvider({
             mainnet: "https://runes.mainnet.midl.xyz",
@@ -70,10 +70,18 @@ const config: HardhatUserConfig = {
         btcConfirmationsRequired: 1,
         hardhatNetwork: "regtest",
         network: {
-          explorerUrl: "https://mempool.regtest.midl.xyz",
+          explorerUrl: "https://mempool.staging.midl.xyz",
           id: "regtest",
           network: "regtest",
         },
+        provider: () =>
+          new MempoolSpaceProvider({
+            regtest: "https://mempool.staging.midl.xyz",
+          }),
+        runesProvider: () =>
+          new MaestroSymphonyProvider({
+            regtest: "https://runes.staging.midl.xyz",
+          }),
       },
     },
   },
