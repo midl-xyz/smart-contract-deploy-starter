@@ -38,8 +38,9 @@ const deploy: DeployFunction = async ({ midl }) => {
     "depositRune",
     { args: [amount] },
     {
-      hasRunesDeposit: true,
-      runes: [{ id: runeId, value: amount, address: runeAddress }],
+      deposit: {
+        runes: [{ id: runeId, amount: amount, address: runeAddress }],
+      },
     },
   );
 
@@ -48,12 +49,15 @@ const deploy: DeployFunction = async ({ midl }) => {
     "withdrawRune",
     { args: [amount] },
     {
-      hasRunesWithdraw: true,
-      runes: [{ id: runeId, value: amount, address: runeAddress }],
+      withdraw: {
+        runes: [{ id: runeId, amount: amount, address: runeAddress }],
+      },
     },
   );
 
-  await midl.execute({ assetsToWithdraw: [runeAddress], shouldComplete: true });
+  await midl.execute({
+    withdraw: { runes: [{ id: runeId, amount: amount, address: runeAddress }] },
+  });
 };
 
 deploy.tags = ["main", "Runes"];
