@@ -17,7 +17,6 @@ const deploy: DeployFunction = async ({ midl }) => {
   // RuneERC20
 
   const CollateralRuneERC20 = await midl.get("CollateralERC20");
-
   await midl.deploy("RuneERC20", [CollateralRuneERC20?.address]);
 
   await midl.execute();

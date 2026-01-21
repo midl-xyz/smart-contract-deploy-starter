@@ -24,23 +24,21 @@ const deploy: DeployFunction = async ({ midl }) => {
   const runeId = "37535:8";
   const amount = parseEther("1");
 
-  await midl.deploy("RunesRelayer", [runeAddress]);
-
   const Relayer = await midl.get("RunesRelayer");
 
-  await midl.read(
+  await midl.write(
     "TERC20",
     "approve",
     [Relayer?.address, amount],
     //to: runeAddress,
   );
 
-  await midl.read("RunesRelayer", "depositRune", [
+  await midl.write("RunesRelayer", "depositRune", [
     amount,
     { id: runeId, amount: amount, address: runeAddress },
   ]);
 
-  await midl.read("RunesRelayer", "withdrawRune", [
+  await midl.write("RunesRelayer", "withdrawRune", [
     amount,
     { id: runeId, amount: amount, address: runeAddress },
   ]);
