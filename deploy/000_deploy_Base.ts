@@ -15,6 +15,7 @@ const deploy: DeployFunction = async ({ midl }) => {
   await midl.execute();
 
   // RuneERC20
+  console.log("Start deployment process, deploy RuneERC20");
 
   const CollateralRuneERC20 = await midl.get("CollateralERC20");
   await midl.deploy("RuneERC20", [CollateralRuneERC20?.address]);
@@ -45,14 +46,19 @@ const deploy: DeployFunction = async ({ midl }) => {
   await midl.execute();
 
   // MintUsingBitcoinAsCollateral
+  console.log("Performing ERC20 Minting");
 
-  await midl.write("RuneERC20", "mintUsingBitcoinAsCollateral", [
-    parseUnits("5", 16),
-  ]);
+  await midl.write(
+    "RuneERC20",
+    "mintUsingBitcoinAsCollateral",
+    [parseUnits("5", 16)],
+    { value: parseUnits("5", 16) },
+  );
 
   await midl.execute();
 
   // RequestRedemption
+  console.log("Request Redemption");
 
   await midl.write("RuneERC20", "requestRedemption", [parseUnits("2", 17)]);
 
