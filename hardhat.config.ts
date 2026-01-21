@@ -55,11 +55,11 @@ const config: HardhatUserConfig = {
           id: "mainnet",
           network: "bitcoin",
         },
-        provider: () =>
+        providerFactory: () =>
           new MempoolSpaceProvider({
             mainnet: "https://mempool.space",
           }),
-        runesProvider: () =>
+        runesProviderFactory: () =>
           new MaestroSymphonyProvider({
             mainnet: "https://runes.mainnet.midl.xyz",
           }),
@@ -74,11 +74,11 @@ const config: HardhatUserConfig = {
           id: "regtest",
           network: "regtest",
         },
-        provider: () =>
+        providerFactory: () =>
           new MempoolSpaceProvider({
             regtest: "https://mempool.staging.midl.xyz",
           }),
-        runesProvider: () =>
+        runesProviderFactory: () =>
           new MaestroSymphonyProvider({
             regtest: "https://runes.staging.midl.xyz",
           }),
