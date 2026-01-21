@@ -41,11 +41,6 @@ const config: HardhatUserConfig = {
       },
       chainId: 777,
     },
-    hardhat: {
-      accounts: {
-        count: 204,
-      },
-    },
   },
   midl: {
     path: "deployments",
