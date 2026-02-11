@@ -1,3 +1,4 @@
+import type { DeploymentData } from "@midl/hardhat-deploy/dist/actions/saveDeployment.cjs";
 import type { DeployFunction } from "hardhat-deploy/types";
 
 const deploy: DeployFunction = async ({ midl }) => {
@@ -19,14 +20,16 @@ const deploy: DeployFunction = async ({ midl }) => {
 
   // Save ProxyLogic ABI into the "ProxyLogic.json" file with TransparentUpgradeableProxy address
   await midl.save("ProxyLogic", {
-    abi: (await midl.get("ProxyLogic"))?.abi!,
-    address: (await midl.get("TransparentUpgradeableProxy"))?.address!,
+    abi: (await midl.get("ProxyLogic"))?.abi,
+    address: ((await midl.get("TransparentUpgradeableProxy")) as DeploymentData)
+      .address,
   });
 
   // Create a new file with name "Proxy2" with ProxyLogic ABI and TransparentUpgradeableProxy address
   await midl.save("Proxy2", {
-    abi: (await midl.get("ProxyLogic"))?.abi!,
-    address: (await midl.get("TransparentUpgradeableProxy"))?.address!,
+    abi: (await midl.get("ProxyLogic"))?.abi,
+    address: ((await midl.get("TransparentUpgradeableProxy")) as DeploymentData)
+      .address,
   });
 
   // Delete existing deployment to be able to deploy contract once again
@@ -42,8 +45,9 @@ const deploy: DeployFunction = async ({ midl }) => {
 
   // Rewrite "Proxy2" with newly deployed TransparentUpgradeableProxy address
   await midl.save("Proxy2", {
-    abi: (await midl.get("ProxyLogic"))?.abi!,
-    address: (await midl.get("TransparentUpgradeableProxy"))?.address!,
+    abi: (await midl.get("ProxyLogic"))?.abi,
+    address: ((await midl.get("TransparentUpgradeableProxy")) as DeploymentData)
+      .address,
   });
 };
 

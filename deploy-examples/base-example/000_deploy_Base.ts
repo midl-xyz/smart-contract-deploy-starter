@@ -47,9 +47,12 @@ const deploy: DeployFunction = async ({ midl }) => {
 
   // MintUsingBitcoinAsCollateral
 
-  await midl.write("RuneERC20", "mintUsingBitcoinAsCollateral", [
-    parseUnits("5", 16),
-  ]);
+  await midl.write(
+    "RuneERC20",
+    "mintUsingBitcoinAsCollateral",
+    [parseUnits("5", 16)],
+    { value: parseUnits("5", 16) },
+  );
 
   await midl.execute();
 

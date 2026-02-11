@@ -1,5 +1,5 @@
-import type { DeployFunction } from "hardhat-deploy/types";
 import { parseEther } from "ethers";
+import type { DeployFunction } from "hardhat-deploy/types";
 import { erc20 } from "@/typechain-types/factories/@openzeppelin/contracts/token";
 
 const deploy: DeployFunction = async ({ midl }) => {
@@ -26,22 +26,22 @@ const deploy: DeployFunction = async ({ midl }) => {
 
   const Relayer = await midl.get("RunesRelayer");
 
-  await midl.write(
-    "TERC20",
-    "approve",
-    [Relayer?.address, amount],
-    //to: runeAddress,
-  );
+  await midl.write("TERC20", "approve", [Relayer?.address, amount], {
+    to: runeAddress,
+  });
 
-  await midl.write("RunesRelayer", "depositRune", [
-    amount,
-    { id: runeId, amount: amount, address: runeAddress },
-  ]);
+  await midl.write("RunesRelayer", "depositRune", [amount], undefined, {
+    deposit: {
+      runes: [{ id: runeId, amount: amount, address: runeAddress }],
+    },
+  });
+  console.log("tuneAddress type", runeAddress);
 
-  await midl.write("RunesRelayer", "withdrawRune", [
-    amount,
-    { id: runeId, amount: amount, address: runeAddress },
-  ]);
+  await midl.write("RunesRelayer", "withdrawRune", [amount], undefined, {
+    deposit: {
+      runes: [{ id: runeId, amount: amount, address: runeAddress }],
+    },
+  });
 
   await midl.execute({
     withdraw: { runes: [{ id: runeId, amount: amount, address: runeAddress }] },
